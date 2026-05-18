@@ -1,0 +1,16 @@
+package com.impexp.gateway;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class GatewayApplicationTests {
+	GatewayApplicationTests() {
+		
+	}
+
+	@Test
+	void contextLoads() {
+	}
+
+}

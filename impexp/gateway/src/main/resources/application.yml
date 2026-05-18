@@ -1,0 +1,32 @@
+server:
+port: 9091
+
+spring:
+application:
+    name: api-gateway
+cloud:
+    gateway:
+    routes:
+        # Ruta de las apis
+    -id: service_usuario
+    uri: http://localhost:8081
+    predicates:
+        - Path=/usuario/**
+
+
+    -id: service_gestionusuarios
+    uri: http://localhost:8082
+    predicates:
+        - Path=/gestionusuarios/**
+
+
+    -id: service_cargas
+    uri: http://localhost:8083
+    predicates:
+        - Path=/cargas/**
+
+
+    -id: service_gestioncargas
+    uri: http://localhost:8084
+    predicates:
+        - Path=/gestioncargas/**
